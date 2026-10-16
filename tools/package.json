@@ -1,0 +1,13 @@
+{
+  "name": "tangerine-blue-tools",
+  "private": true,
+  "type": "module",
+  "description": "Screenshot harness for checking the theme against live bsky.app",
+  "scripts": {
+    "postinstall": "playwright install chromium",
+    "shots": "node screenshot.mjs ../TangerineBlue.css light && node screenshot.mjs ../TangerineBlue.css dark"
+  },
+  "dependencies": {
+    "playwright": "^1.58.0"
+  }
+}
