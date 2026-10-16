@@ -8,8 +8,9 @@ This is a user stylesheet. Bluesky doesn't support custom themes, so you apply i
 browser extension that injects CSS, such as [Stylebot](https://stylebot.dev) or
 [Stylus](https://github.com/openstyles/stylus).
 
-**Status: early.** The feed, profiles, and post threads are styled. The left navigation, compose
-box, notifications, and settings are still stock Bluesky and are next on the list.
+**Status: early.** The feed, profiles, post threads, search, and dialogs are styled. Logged-in
+views like notifications, chat, and settings have had less attention and may still show stock
+Bluesky colors in places.
 
 ## Install
 
@@ -22,8 +23,8 @@ box, notifications, and settings are still stock Bluesky and are next on the lis
    - [`TangerineBlue-granite.css`](TangerineBlue-granite.css)
 3. On bsky.app, open the extension, create a style for `bsky.app`, paste the CSS, and save.
 
-Dark mode follows Bluesky's own theme setting. Pick "Dim" in Bluesky's appearance settings
-for the dark version; the pure black "Dark" theme is not covered yet.
+Dark mode follows Bluesky's own theme setting, so "Dim" and "Dark" in Bluesky's appearance
+settings both get the dark version. Dim is the one that's been checked most carefully.
 
 ## Why it can break
 

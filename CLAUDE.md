@@ -16,7 +16,12 @@ Mastodon (`../TangerineUI-for-Mastodon`) and shares its palette.
 Bluesky sets colors as inline styles, so rules match values like `rgb(0, 106, 255)` with
 attribute selectors (`[style*="..."]`) and swap in `--t-*` tokens with `!important`. Structure
 is targeted through Bluesky's `data-testid` hooks. Dark tokens switch on Bluesky's own
-`html.theme--dim` / `html.theme--dark` class, so they follow the in-app theme setting, not the OS. When Bluesky changes a palette
+`html.theme--dim` / `html.theme--dark` class, so they follow the in-app theme setting, not the OS. Palette rules are scoped per theme class
+(`html.theme--light`, `html.theme--dim`, `html.theme--dark`) and map Bluesky's shades
+(`primary_500` for solid buttons, `primary_600` for hover and ghost-button text, `primary_200`
+for disabled, `contrast_*` for greys). The authoritative shade values come from the
+`@bsky.app/alf` npm package (`dist/palette.js`). Override rules after the palette section
+are prefixed with `html[class]` so they outrank the palette rules. When Bluesky changes a
 value, the matching rule silently stops applying; the screenshot harness in `tools/` is how
 to catch that.
 
